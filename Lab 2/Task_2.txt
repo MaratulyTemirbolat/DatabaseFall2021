@@ -1,0 +1,35 @@
+CREATE TABLE customers(
+    id integer CONSTRAINT mainKey PRIMARY KEY,
+    full_name varchar(50) NOT NULL,
+    timestamp timestamp NOT NULL,
+    delivery_address text NOT NULL
+);
+select * from customers;
+CREATE TABLE products(
+    id varchar CONSTRAINT productKey PRIMARY KEY,
+    name varchar UNIQUE NOT NULL,
+    description text,
+    price double precision NOT NULL CHECK (price > 0)
+);
+DROP TABLE products;
+select * from products;
+
+CREATE TABLE orders(
+    code integer PRIMARY KEY,
+    customer_id integer,
+    total_sum double precision NOT NULL,
+    is_paid boolean NOT NULL,
+    CONSTRAINT  fk_customer FOREIGN KEY(customer_id) REFERENCES customers(id),
+    CONSTRAINT posCondition CHECK (total_sum > 0)
+);
+select * from orders;
+
+CREATE TABLE order_items(
+    order_code integer,
+    product_id varchar,
+    quantity integer NOT NULL,
+    CONSTRAINT fk_order FOREIGN KEY(order_code) REFERENCES orders(code),
+    CONSTRAINT fk_product FOREIGN KEY(product_id) REFERENCES products(id),
+    CONSTRAINT pk_order_items PRIMARY KEY(order_code,product_id),
+    CONSTRAINT pos_quantity CHECK ( quantity > 0 )
+);

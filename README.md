@@ -1,4 +1,4 @@
-# DatabaseFall2021
+# DatabaseFall2021FinalProject
 This file illustrates main description of the done project with the name "Electronics vendor". 
 
 Project short descrption:

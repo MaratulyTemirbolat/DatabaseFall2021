@@ -1,11 +1,11 @@
 # Database Fall 2021 Project FOLDER "FINAL_PART" that is located in folder "Project"
-YOU NEED TO OPEN "FINAL_PART" folder to concern the sql part
+YOU NEED TO OPEN "FINAL_PART" folder to concern the sql part.
 This file illustrates main description of the done project with the name "Electronics vendor". 
 
 # Files Description:
-  project_table_creation.sql -- sql file with all table creations based on ER diagram 
-  project_table_insertion.sql -- sql file with table data insertions
-  project_queries.sql -- sql file with all queries according to the project
+  project_table_creation.sql -- sql file with all table creations based on ER diagram (Located in "FINAL_PART" folder).
+  project_table_insertion.sql -- sql file with table data insertions (Located in "FINAL_PART" folder).
+  project_queries.sql -- sql file with all queries according to the project (Located in "FINAL_PART" folder).
 
 # Project short descrption:
   The database consists of the huge amount of the stores. Those stores have various number of the employees as well as warehouses where the corresponded products, packages are located.

@@ -1,10 +1,13 @@
-# DatabaseFall2021FinalProject
+# Database Fall 2021 Project FOLDER "FINAL_PART" that is located in folder "Project"
+YOU NEED TO OPEN "FINAL_PART" folder to concern the sql part
 This file illustrates main description of the done project with the name "Electronics vendor". 
 
 # Files Description:
+  project_table_creation.sql -- sql file with all table creations based on ER diagram 
+  project_table_insertion.sql -- sql file with table data insertions
+  project_queries.sql -- sql file with all queries according to the project
 
-
-Project short descrption:
+# Project short descrption:
   The database consists of the huge amount of the stores. Those stores have various number of the employees as well as warehouses where the corresponded products, packages are located.
   There are different types of the customers along with the orders that the puchase. The customers and orders can be online and offline respectively.
   The information about with type of the payment also considered in several cases. It can be card, cash or account. The customers can have accounts by which they made the purchases
@@ -12,7 +15,7 @@ Project short descrption:
   It was necessary to consider the audit of the products in manufacturer, stores and send requests to the manufacturer if it was necessary to update the amount of products.
   Online orders made by the online customers are served and delivered by the shippers. The tracking for all the orders also considered to find the current location, state of the order.
   
-Final Project table description:
+# Final Project table description:
     1) phones -- table is used to store the phone information about the employees 
     2) positions -- table that keeps the info about the working position of the employee in store 
     3) employees -- all the employees that work in store
@@ -44,23 +47,23 @@ Final Project table description:
     29) online_order_products -- table with the all products that are combined for the corresponded order that was done online
     30) offline_order_products -- table with the all products that are combined for the corresponded order that was done offline
         
-Views description:
+# Views description:
   There are several views that were created in the database:
      1) all_customers -- was used to store information for all online and offline customers
      2) all_orders -- was created to store data for all online and offline made orders
      3) all_order_products -- was created to store info about the attached products for the whole orders
 
-Procedure description:
+# Procedure description:
    For solving problems with some activities such as update, insert etc procedures were created:
       1) create_destroyed_shipment -- was created since if the some orders were destroyed that were served by the shippers. It was necessary to reorganize the same order with the same products again.
 
-Function description:
+# Function description:
     To make some combined activities or get some required changed data it was required to construct the functions for triggers and for some actions.
       1) get_order_id -- function was used to get new id for the online and offline new orders
       2) get_customer_id -- function was constructed to obtain new id for the online and offlien new customers respectively
       3) update_function_trigger -- function was used to peform actions if the trigger for update_order_tracking_trigger was executed to start create_destroyed_shipment procedure
 
-Trigger description:
+# Trigger description:
     For some insertions, updations, deletions it was necessary to perform extra checks, activities and so on
       1) update_order_tracking_trigger -- trigger was created to be executed after the update for order_tracking table that calls function update_function_trigger that checks status.
           

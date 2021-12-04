@@ -1,6 +1,9 @@
 # DatabaseFall2021FinalProject
 This file illustrates main description of the done project with the name "Electronics vendor". 
 
+#Files Description:
+
+
 Project short descrption:
   The database consists of the huge amount of the stores. Those stores have various number of the employees as well as warehouses where the corresponded products, packages are located.
   There are different types of the customers along with the orders that the puchase. The customers and orders can be online and offline respectively.
